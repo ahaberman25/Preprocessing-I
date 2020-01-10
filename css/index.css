@@ -1,1 +1,325 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+}
+.view-height {
+  height: 78.9vh;
+}
+.h4-base {
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  color: #494A4F;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.main-container .top-container {
+  display: flex;
+  justify-content: center;
+  background-color: #494A4F;
+  width: 100%;
+}
+.main-container .top-container header {
+  padding: 3%;
+  color: white;
+  width: 70%;
+}
+.main-container .top-container header h1 {
+  font-size: 2em;
+  text-align: center;
+  padding: 2%;
+}
+.main-container .top-container header h3 {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0 0 2% 0;
+}
+@media (max-width: 500px) {
+  .main-container .top-container header h3 {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+.main-container .top-container header nav {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .main-container .top-container header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main-container .top-container header nav a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #FCFCFC;
+}
+@media (max-width: 500px) {
+  .main-container .top-container header nav a {
+    padding-bottom: 2%;
+  }
+}
+.main-container .top-container header nav a:hover {
+  color: red;
+}
+.middle-container {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .middle-container {
+    flex-direction: column;
+  }
+}
+.middle-container .left-container {
+  background-color: #E6E5EA;
+  width: 40%;
+  height: 78.9vh;
+  text-align: right;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .middle-container .left-container {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+}
+.middle-container .left-container img {
+  border-radius: 50%;
+  padding-bottom: 10%;
+  height: 25%;
+}
+.middle-container .left-container .contact-info h4 {
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  color: #494A4F;
+}
+.middle-container .left-container .contact-info ul {
+  padding-bottom: 10%;
+}
+.middle-container .left-container .contact-info ul li {
+  padding-bottom: 1%;
+}
+.middle-container .left-container .education-info h4 {
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  color: #494A4F;
+}
+.middle-container .left-container .education-info .education-one {
+  padding-bottom: 5%;
+}
+.middle-container .left-container .education-info .education-one .title {
+  font-weight: bold;
+}
+.middle-container .left-container .education-info .education-one .year {
+  font-style: italic;
+}
+.middle-container .left-container .education-info .education-two {
+  padding-bottom: 10%;
+}
+.middle-container .left-container .education-info .education-two .title {
+  font-weight: bold;
+}
+.middle-container .left-container .education-info .education-two .year {
+  font-style: italic;
+}
+.middle-container .left-container .skills-info h4 {
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  color: #494A4F;
+}
+.middle-container .right-container {
+  background-color: #FCFCFC;
+  width: 100%;
+  height: 78.9vh;
+}
+.middle-container .right-container .profile {
+  padding: 25.9% 20% 2% 2%;
+}
+.middle-container .right-container .profile h4 {
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  color: #494A4F;
+}
+.middle-container .right-container .profile p {
+  padding-bottom: 2%;
+}
+.middle-container .right-container .work-history {
+  padding: 2% 20% 2% 2%;
+}
+.middle-container .right-container .work-history h4 {
+  font-size: 1.8em;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  color: #494A4F;
+}
+.middle-container .right-container .work-history .work-info h6 {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 0.5%;
+}
+.middle-container .right-container .work-history .work-info .date {
+  font-style: italic;
+  padding-bottom: 1%;
+}
+.middle-container .right-container .work-history .work-info .job-info {
+  padding-bottom: 3%;
+}
+.bottom-container {
+  width: 100%;
+  background-color: #E6E5EA;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+}

@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +137,216 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+// VARIABLES
+@white: #FCFCFC;
+@red: red;
+@dark: #494A4F;
+@med: #E6E5EA;
+@light: #FCFCFC;
+@caps: uppercase;
+@h4-size: 1.8em;
+
+// MIX-INS
+.view-height {
+	height: 78.9vh;
+}
+.h4-base {
+	font-size: @h4-size;
+	padding-bottom: 2%;
+	text-transform: @caps;
+	font-family: 'Anton', sans-serif;
+	color: @dark;
 }
 
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.main-container {
+	.top-container {
+
+		display: flex;
+		justify-content: center;
+		background-color: @dark;
+		width: 100%;
+
+		header {
+			padding: 3%;
+			color: white;
+			width: 70%;
+
+			h1 {
+				font-size: 2em;
+				text-align: center;
+				padding: 2%;
+			}
+
+			h3 {
+				font-size: 1.2em;
+				text-align: center;
+				padding: 0 0 2% 0;
+
+				@media (max-width: 500px) {
+					width: 75%;
+					margin: 0 auto;
+				}
+			}
+
+			nav {
+				display: flex;
+				justify-content: space-between;
+
+				@media (max-width: 500px) {
+					flex-direction: column;
+					align-items: center;
+				}
+
+				a {
+					font-size: 1.2em;
+					text-decoration: none;
+					color: @white;
+
+					@media (max-width: 500px) {
+						padding-bottom: 2%;
+					}
+
+					&:hover {
+						color: @red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.middle-container {
+	display: flex;
+	width: 100%;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+
+	.left-container {
+		background-color: @med;
+		width: 40%;
+		.view-height;
+		text-align: right;
+		padding: 2%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			height: 100vh;
+			text-align: center;
+		}
+
+		img {
+			border-radius: 50%;
+			padding-bottom: 10%;
+			height: 25%;
+		}
+
+		.contact-info {
+			h4 {
+				.h4-base;
+			}
+
+			ul {
+				padding-bottom: 10%;
+
+				li {
+					padding-bottom: 1%;
+				}
+			}
+		}
+
+		.education-info {
+			h4 {
+				.h4-base;
+			}
+			
+			.education-one {
+				padding-bottom: 5%;
+
+				.title {
+					font-weight: bold;
+				}
+				.year {
+					font-style: italic;
+				}
+			}
+
+			.education-two {
+				padding-bottom: 10%;
+				.title {
+					font-weight: bold;
+				}
+				.year {
+					font-style: italic;
+				}
+			}
+		}
+
+		.skills-info {
+			h4 {
+				.h4-base;
+			}
+		}
+	}
+
+	.right-container {
+		background-color: @light;
+		width: 100%;
+		.view-height;
+
+		.profile {
+			padding: 25.9% 20% 2% 2%;
+
+			h4 {
+				.h4-base;
+			}
+			p {
+				padding-bottom: 2%;
+			}
+		}
+
+		.work-history {
+			padding: 2% 20% 2% 2%;
+
+			h4 {
+				.h4-base;
+			}
+
+			.work-info {
+				h6 {
+					font-size: 1.2em;
+					font-weight: bold;
+					padding-bottom: .5%;
+				}
+				.date {
+					font-style: italic;
+					padding-bottom: 1%;
+				}
+				.job-info {
+					padding-bottom: 3%;
+				}
+			}
+		}
+	}
+}
+
+.bottom-container {
+	width: 100%;
+	background-color: @med;
+	padding: 1%;
+	display: flex;
+	justify-content: center;
+}
